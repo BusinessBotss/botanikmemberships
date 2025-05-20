@@ -84,10 +84,17 @@
     input, textarea, select {
       width: 100%;
       padding: 1rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 0.5rem;
       border-radius: 0.5rem;
       border: 1px solid #ccc;
       font-size: 1rem;
+    }
+
+    small {
+      display: block;
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     input[type="submit"] {
@@ -142,62 +149,81 @@
 
     <label for="full_name">Full Name</label>
     <input type="text" name="full_name" id="full_name" required>
+    <small>Your complete legal name as it should appear on your membership card.</small>
 
     <label for="first_name">First Name</label>
     <input type="text" name="first_name" id="first_name">
+    <small>Used for personalized communication.</small>
 
     <label for="last_name">Last Name</label>
     <input type="text" name="last_name" id="last_name">
+    <small>Your family or surname.</small>
 
     <label for="email">Email</label>
     <input type="email" name="email" id="email" required>
+    <small>We'll use this to contact you about your membership.</small>
 
     <label for="phone_number">Phone Number</label>
     <input type="text" name="phone_number" id="phone_number">
+    <small>A number we can reach you on if needed.</small>
 
     <label for="address">Address</label>
     <input type="text" name="address" id="address">
+    <small>Street and number, used only for membership records.</small>
 
     <label for="city">City</label>
     <input type="text" name="city" id="city">
+    <small>Your city of residence.</small>
 
     <label for="postal_code">Postal / Zip Code</label>
     <input type="text" name="postal_code" id="postal_code">
+    <small>ZIP or postal code corresponding to your address.</small>
 
     <label for="country">Country</label>
     <input type="text" name="country" id="country">
+    <small>Where are you currently based?</small>
 
     <label for="birth_date">Birth Date</label>
     <input type="date" name="birth_date" id="birth_date">
+    <small>To verify age requirements and personalize your experience.</small>
 
     <label for="referral">Where did you hear about us?</label>
     <input type="text" name="referral" id="referral">
+    <small>Help us understand how you discovered 1923 Botanik.</small>
 
     <label for="personal_intro">Personal Introduction</label>
     <textarea name="personal_intro" id="personal_intro" rows="4"></textarea>
+    <small>Tell us a bit about yourself. What brings you here?</small>
 
     <label for="career">Professional Journey</label>
     <textarea name="career" id="career" rows="4"></textarea>
+    <small>Describe your background, industry, and where you’re heading.</small>
 
     <label for="expectations">Membership Expectations</label>
     <textarea name="expectations" id="expectations" rows="4"></textarea>
+    <small>What do you expect from this membership experience?</small>
 
     <label for="passions">Passions</label>
     <textarea name="passions" id="passions" rows="4"></textarea>
+    <small>What are your interests, hobbies, or creative outlets?</small>
 
     <label for="comfort_zones">Comfort Zones</label>
     <textarea name="comfort_zones" id="comfort_zones" rows="4"></textarea>
+    <small>Tell us how you feel about unique, immersive events. What excites or challenges you?</small>
 
     <label for="contact_method">Preferred Contact Method</label>
     <input type="text" name="contact_method" id="contact_method">
+    <small>Let us know how you'd prefer to be reached (email, phone, etc.).</small>
 
     <label for="membership_photo">Upload a Photo</label>
     <input type="file" name="membership_photo" id="membership_photo">
+    <small>This will be used on your digital or physical membership ID.</small>
 
     <label>
       <input type="checkbox" name="privacy_policy" required>
       I accept the Privacy Policy
     </label>
+    <small>Review our policy to understand how your data is managed.</small>
 
     <input type="submit" value="Submit Application">
   </form>
