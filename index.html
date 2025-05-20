@@ -37,13 +37,13 @@
     }
 
     header h1 {
-      font-size: 2.75rem;
+      font-size: 3rem;
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: var(--muted);
     }
 
@@ -51,7 +51,7 @@
       background-color: var(--bg-light);
       padding: 2.5rem;
       border-radius: var(--radius);
-      max-width: 600px;
+      max-width: 720px;
       margin: 0 auto 2rem;
       box-shadow: var(--shadow);
       border: 2px solid transparent;
@@ -68,9 +68,9 @@
     }
 
     form h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       color: var(--primary);
-      font-size: 2rem;
+      font-size: 2.25rem;
       text-align: center;
     }
 
@@ -81,10 +81,10 @@
       font-size: 1rem;
     }
 
-    input, textarea {
+    input, textarea, select {
       width: 100%;
-      padding: 0.9rem;
-      margin-bottom: 1.2rem;
+      padding: 1rem;
+      margin-bottom: 1.4rem;
       border-radius: 0.5rem;
       border: 1px solid #ccc;
       font-size: 1rem;
@@ -94,10 +94,11 @@
       background: var(--accent);
       color: #fff;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
       border: none;
+      padding: 1rem;
     }
 
     input[type="submit"]:hover {
@@ -107,47 +108,98 @@
 
     .confirmation-message {
       text-align: center;
-      margin-bottom: 3rem;
-      font-size: 1rem;
+      margin-top: 2rem;
+      font-size: 1.05rem;
       color: var(--muted);
     }
 
     footer {
       margin-top: 5rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--muted);
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       form {
-        padding: 1rem;
+        padding: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Join Botanik 1923</h1>
-    <p>Private experiences. Botanical elegance. Members only.</p>
+    <h1>Become a Member</h1>
+    <p>Tell us about yourself and request access to 1923 Botanik.</p>
   </header>
 
-  <form>
-    <h2>Apply for Membership</h2>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="John Doe" required>
+  <form action="https://script.google.com/macros/s/AKfycbxg8Mlq3gwF3a6c0lbQjEQXDyMYD-trQ-a07YGStBSoyeQDHSd1NeiV8LOab-PdpCmsRw/exec" method="POST">
+    <h2>Membership Application</h2>
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    <label for="full_name">Full Name</label>
+    <input type="text" name="full_name" id="full_name" required>
 
-    <label for="message">Tell us why you want to join</label>
-    <textarea id="message" name="message" rows="4" placeholder="What inspires you to be part of Botanik 1923?" required></textarea>
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" id="first_name">
 
-    <input type="submit" value="Request Access">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" id="last_name">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="phone_number">Phone Number</label>
+    <input type="text" name="phone_number" id="phone_number">
+
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address">
+
+    <label for="city">City</label>
+    <input type="text" name="city" id="city">
+
+    <label for="postal_code">Postal / Zip Code</label>
+    <input type="text" name="postal_code" id="postal_code">
+
+    <label for="country">Country</label>
+    <input type="text" name="country" id="country">
+
+    <label for="birth_date">Birth Date</label>
+    <input type="date" name="birth_date" id="birth_date">
+
+    <label for="referral">Where did you hear about us?</label>
+    <input type="text" name="referral" id="referral">
+
+    <label for="personal_intro">Personal Introduction</label>
+    <textarea name="personal_intro" id="personal_intro" rows="4"></textarea>
+
+    <label for="career">Professional Journey</label>
+    <textarea name="career" id="career" rows="4"></textarea>
+
+    <label for="expectations">Membership Expectations</label>
+    <textarea name="expectations" id="expectations" rows="4"></textarea>
+
+    <label for="passions">Passions</label>
+    <textarea name="passions" id="passions" rows="4"></textarea>
+
+    <label for="comfort_zones">Comfort Zones</label>
+    <textarea name="comfort_zones" id="comfort_zones" rows="4"></textarea>
+
+    <label for="contact_method">Preferred Contact Method</label>
+    <input type="text" name="contact_method" id="contact_method">
+
+    <label for="membership_photo">Upload a Photo</label>
+    <input type="file" name="membership_photo" id="membership_photo">
+
+    <label>
+      <input type="checkbox" name="privacy_policy" required>
+      I accept the Privacy Policy
+    </label>
+
+    <input type="submit" value="Submit Application">
   </form>
 
   <div class="confirmation-message">
